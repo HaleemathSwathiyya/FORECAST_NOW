@@ -1,20 +1,23 @@
-import { LoginComponent } from './login/login.component';
-import { RegistrationComponent } from './register/register.component';
-import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
-import { HomePageComponent } from './home-page/home-page.component';
+import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+//import { HomePageComponent } from './home-page/home-page.component';
+import { FormsModule } from '@angular/forms';
+import { WeatherDetailsComponent } from './weather-details/weather-details.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegistrationComponent },
-  {path: 'home-page', component: HomePageComponent},
+  { path: 'register', component: RegisterComponent },
+  { path: 'weather-details', component: WeatherDetailsComponent },
   // Add other routes if needed
-  { path: '', redirectTo: '/login', pathMatch: 'full' } // Default route for login page
+  { path: '', redirectTo: '/weather-details', pathMatch: 'full' } // Default route for login page
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),HttpClientModule],
-  exports: [RouterModule]
+  imports: [RouterModule.forRoot(routes), HttpClientModule,FormsModule],
+  exports: [RouterModule,FormsModule]
 })
 export class AppRoutingModule { }

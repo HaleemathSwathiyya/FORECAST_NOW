@@ -16,7 +16,7 @@ import { Component } from '@angular/core';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegistrationComponent {
+export class RegisterComponent {
   // register() {
   //   // Here you can add code to handle the registration logic
   //   // For example, send the registration data to a server
