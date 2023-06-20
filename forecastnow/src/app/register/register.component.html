@@ -45,8 +45,26 @@
         </div> -->
         <div class="col-md-6 right">
           <div class="input-box">
-            <header>Register</header>
+            <header>Sign Up</header>
+          <form>
             <div class="input-field">
+              <input type="text" class="input" id="username" required pattern="[A-Za-z\s]+" autocomplete="off">
+              <label for="username">Username</label>
+            </div>
+            <div class="input-field">
+              <input type="email" class="input" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off">
+              <label for="email">Email</label>
+            </div>
+            <div class="input-field">
+              <input type="password" class="input" id="password" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+              <label for="password">Password</label>
+            </div>
+            <div class="input-field">
+              <input type="password" class="input" id="confirmPassword" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+              <label for="confirmPassword">Confirm Password</label>
+            </div>
+          </form>
+            <!-- <div class="input-field">
               <input type="text" class="input" id="email" required autocomplete="off">
               <label for="username">Username</label>
             </div>
@@ -61,7 +79,7 @@
             <div class="input-field">
               <input type="password" class="input" id="password" required>
               <label for="password">Confirm Password</label>
-            </div>
+            </div> -->
             <div class="input-field">
               <input type="submit" class="submit" value="Sign Up" routerLink="/weather-details">
             </div>

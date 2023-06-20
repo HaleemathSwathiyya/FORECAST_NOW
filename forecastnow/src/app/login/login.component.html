@@ -47,13 +47,21 @@
 		  <div class="input-box">
 			<header style="font-size: large;">Login</header>
 			<div class="input-field">
+				<input type="email" class="input" id="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" autocomplete="off">
+				<label for="email">Email</label>
+			  </div>
+			  <div class="input-field">
+				<input type="password" class="input" id="password" required pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$">
+				<label for="password">Password</label>
+			  </div>
+			<!-- <div class="input-field">
 			  <input type="text" class="input" id="email" required autocomplete="off">
 			  <label for="email">Email</label>
 			</div>
 			<div class="input-field">
 			  <input type="password" class="input" id="password" required>
 			  <label for="password">Password</label>
-			</div>
+			</div> -->
 			<div class="input-field">
 			  <input type="submit" class="submit" value="Login">
 			</div>
