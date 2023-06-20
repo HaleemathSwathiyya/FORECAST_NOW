@@ -1,0 +1,36 @@
+ 
+  .navbar-brand {
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    /* margin-right: 1rem; */
+    font-size: 1.25rem;
+    color: #0f6796; 
+    text-decoration: none;
+    white-space: nowrap;
+    
+  }
+
+  .navbar{
+    
+    background-color: rgba(0, 4, 8, 0.829) !important;
+
+  }
+
+  /* .container-fluid{
+    background-color: rgba(0, 0, 0, 0.2) !important;
+
+  } */
+  
+  .nav-link{
+    padding-top: .3125rem;
+    padding-bottom: .3125rem;
+    /* margin-right: 1rem; */
+    color: #B0BEC5 ;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .nav-link:hover{
+    color:rgba(136, 176, 240, 0.2);
+  }
+  

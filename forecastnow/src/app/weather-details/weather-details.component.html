@@ -9,7 +9,11 @@
     <title>forecast details</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="weather-details.component.css">
 </head>
 
@@ -24,13 +28,13 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="#">Favorites</a>
+            <a class="nav-link" href="/favorites-page">Favorites</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Map</a>
+            <a class="nav-link" href="/map">Map</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Logout</a>
+            <a class="nav-link" href="login">Logout</a>
           </li>
         </ul>
       </div>
@@ -54,12 +58,12 @@
                                     <div class="weather__card">
                                         <div class="d-flex flex-row justify-content-center align-items-center">
                                             <div class="p-3">
-                                                <!-- <h1>{{climate.list[0].main.temp}}&#8451;</h1> -->
+                                                <h2>{{climate.forecast.forecastday[0].hour[0].temp_c}}&#8451;</h2>
                                             </div>
                                             <div class="p-3">
-                                                <!-- <span class="weather__icon">{{climate.forecast.items[0].weather.icon}}</span>
-                                                <img src="{{climate.list[0].weather[0].icon}}" alt="">
-                                                <img src="https://svgur.com/i/d_61.svg"> -->
+                                                <!-- <span class="weather__icon">{{climate.list[0].weather[0].icon}}</span> -->
+                                                <img src={{climate.forecast.forecastday[0].hour[0].condition.icon}} alt="" height="150%" width="150%">
+                                                <!-- <img src="https://svgur.com/i/d_61.svg"> -->
                                             </div>
                                             <div class="p-3">
                                                 <h6></h6>
@@ -67,9 +71,9 @@
                                                 <h6></h6>
                                             </div>
                                             <div class="p-3">
-                                                <!-- <h5>{{climate.list[0].dt}}</h5> -->
-                                                <!-- <h3>{{climate.city.name}}</h3> -->
-                                                <!-- <span class="weather__description">{{climate.list[0].weather[0].description}}</span> -->
+                                                <h4>{{climate.forecast.forecastday[0].hour[0].time}}</h4>
+                                                <h3>{{climate.location.name}}</h3>
+                                                <h4 class="weather__description">{{climate.forecast.forecastday[0].hour[0].condition.text}}</h4>
                                             </div>
                                         </div>
 
@@ -77,15 +81,15 @@
                                             class="weather__status d-flex flex-row justify-content-center align-items-center mt-3">
                                             <div class="p-4 d-flex justify-content-center align-items-center">
                                                 <img src="https://svgur.com/i/oHw.svg">
-                                                <!-- <span>{{climate.list[0].pop}}mm</span> -->
+                                                <span>{{climate.current.precip_mm}}mm</span>
                                             </div>
                                             <div class="p-4 d-flex justify-content-center align-items-center">
                                                 <img src="https://svgur.com/i/oH_.svg">
-                                                <!-- <span>{{climate.list[0].pressure}}%</span> -->
+                                                <span>{{climate.current.pressure_in}}%</span>
                                             </div>
                                             <div class="p-4 d-flex justify-content-center align-items-center">
                                                 <img src="https://svgur.com/i/oKS.svg">
-                                                <!-- <span>{{climate.list[0].wind.speed}}km/h</span> -->
+                                                <span>{{climate.current.wind_kph}}km/h</span>
                                             </div>
                                         </div>
 
@@ -98,45 +102,51 @@
 
                         <div class="weather__forecast d-flex flex-row justify-content-center align-items-center mt-3">
                             <div class="p-4 d-flex flex-column justify-content-center align-items-center">
-                                <!-- <span>{{climate.list[0].dt}}</span> -->
-                                <!-- <img src={{climate.list[0].weather[0].icon}}> -->
-                                <!-- <span>{{climate.list[0].main.temp}}&#8451;</span> -->
+                                <span>{{climate.forecast.forecastday[0].hour[4].time}}</span>
+                                <img src={{climate.forecast.forecastday[0].hour[4].condition.icon}} alt="">
+                                <span>{{climate.forecast.forecastday[0].hour[4].temp_c}}&#8451;</span>
+                            </div>
+                            <!-- <img src={{climate.forecast.items[0]weather.icon}}> -->
+                            <div class="p-4 d-flex flex-column justify-content-center align-items-center">
+                                <span>{{climate.forecast.forecastday[0].hour[8].time}}</span>
+                                <img src={{climate.forecast.forecastday[0].hour[8].condition.icon}} alt="">
+                                <span>{{climate.forecast.forecastday[0].hour[8].temp_c}}&#8451;</span>
                             </div>
 
                             <div class="p-4 d-flex flex-column justify-content-center align-items-center">
-                                <!-- <span>{{climate.list[4].dt}}</span> -->
-                                <!-- <img src={{climate.list[4].weather[4].icon}}> -->
-                                <!-- <span>{{climate.list[4].main.temp}}&#8451;</span> -->
+                                <span>{{climate.forecast.forecastday[0].hour[12].time}}</span>
+                                <img src={{climate.forecast.forecastday[0].hour[12].condition.icon}} alt="">
+                                <span>{{climate.forecast.forecastday[0].hour[12].temp_c}}&#8451;</span>
                             </div>
 
                             <div class="p-4 d-flex flex-column justify-content-center align-items-center">
-                                <!-- <span>{{climate.list[12].dt}}</span> -->
-                                <!-- <img src={{climate.list[12].weather[12].icon}}> -->
-                                <!-- <span>{{climate.list[12].main.temp}}&#8451;</span> -->
+                                <span>{{climate.forecast.forecastday[0].hour[16].time}}</span>
+                                <img src={{climate.forecast.forecastday[0].hour[16].condition.icon}} alt="">
+                                <span>{{climate.forecast.forecastday[0].hour[16].temp_c}}&#8451;</span>
                             </div>
 
                             <div class="p-4 d-flex flex-column justify-content-center align-items-center">
-                                <!-- <span>{{climate.list[20].dt}}</span> -->
-                                <!-- <img src={{climate.list[20].weather[20].icon}}> -->
-                                <!-- <span>{{climate.list[20].main.temp}}&#8451;</span> -->
+                                <span>{{climate.forecast.forecastday[0].hour[20].time}}</span>
+                                <img src={{climate.forecast.forecastday[0].hour[20].condition.icon}} alt="">
+                                <span>{{climate.forecast.forecastday[0].hour[20].temp_c}}&#8451;</span>
                             </div>
 
                             <div class="p-4 d-flex flex-column justify-content-center align-items-center">
-                                <!-- <span>{{climate.list[28].dt}}</span> -->
-                                <!-- <img src={{climate.list[28].weather[28].icon}}> -->
-                                <!-- <span>{{climate.list[28].main.temp}}&#8451;</span> -->
+                                <span>{{climate.forecast.forecastday[0].hour[23].time}}</span>
+                                <img src={{climate.forecast.forecastday[0].hour[23].condition.icon}} alt="">
+                                <span>{{climate.forecast.forecastday[0].hour[23].temp_c}}&#8451;</span>
                             </div>
 
                             <div class="p-4 d-flex flex-column justify-content-center align-items-center">
-                                <!-- <span>{{climate.list[36].dt}}</span> -->
-                                <!-- <img src={{climate.list[36].weather[36].icon}}> -->
-                                <!-- <span>{{climate.list[36].main.temp}}&#8451;</span> -->
+                                <!-- <span>{{climate.forecast.forecastday[0].date}}</span>
+                                <img src={{climate.current.condition.icon}} alt="">
+                                <span>{{climate.forecast.forecastday[0].day.maxtemp_c}}&#8451;</span> -->
                             </div>
 
                             <div class="p-4 d-flex flex-column justify-content-center align-items-center">
-                                <span>Sat</span>
-                                <!-- <img src={{climate.forecast.forecastday[0].day.condition.icon}}> -->
-                                <!-- <span>{{climate.forecast.forecastday[0].day.maxtemp_c}}&#8451;</span> -->
+                                <!-- <span>{{climate.forecast.items[7].date}}</span>
+                                <span>{{climate.forecast.items[7].weather.icon}}</span>
+                                <span>{{climate.forecast.items[7].temperature.max}}&#8451;</span> -->
                             </div>
                         </div>
                     </div>
@@ -157,6 +167,10 @@
                                     data-bs-target="#collapseWidthExample" aria-expanded="false"
                                     aria-controls="collapseWidthExample" placeholder="Search City" name="city"
                                     [(ngModel)] = "cityName" />
+                                    <button id="favorites-button" type="submit">
+                                        <a href="#" routerLink="/favorites-page"><i class="fas fa-heart"></i></a>
+                                      </button>
+                                      
                                 <!-- <span class="link"><i class="bi bi-search"></i></span> -->
                              </form>  
 
@@ -194,29 +208,46 @@
                             <div class="weather">
                                 <div class="row px-3 align8">
                                     <p class="light-text">Clouds</p>
-                                    <p class="ml-auto">{{climate.list[0].clouds.all}}</p>
+                                    <p class="ml-auto">{{climate.current.cloud}}</p>
                                 </div>
                                 <div class="row px-3">
                                     <p class="light-text">Humidity</p>
-                                    <!-- <p class="ml-auto">{{climate.list[0].humidity}}</p> -->
+                                    <p class="ml-auto">{{climate.current.humidity}}</p>
                                 </div>
                                 <div class="row px-3">
                                     <p class="light-text">Wind</p>
-                                    <p class="ml-auto">{{climate.list[0].wind.speed}}</p>
+                                    <p class="ml-auto">{{climate.current.wind_kph}}</p>
                                 </div>
                                 <div class="row px-3">
                                     <p class="light-text">Rain</p>
-                                    <p class="ml-auto">{{climate.list[0].rain}}</p>
-                                </div>
+                                    <p class="ml-auto">{{climate.forecast.forecastday[0].day.daily_chance_of_rain}}</p>
+                                </div>                            
                             </div>
-                            <div class="line mt-3"></div>
+                            <div class="line mt-2"></div>
+
+                            <br>
+                            <br>
+                            <br>
+                            <p class="details">Location Details</p>
+                            <div class="other detials">
+                                <ul>
+                                    <li>City - {{climate.location.name}}</li>
+                                    <br>
+                                    <li>Region - {{climate.location.region}} </li>
+                                    <br>
+                                    <li>Country - {{climate.location.country}} </li>
+                                    <br>
+                                    <li>Local time - {{climate.location.localtime}} </li>
+                                </ul>
+                            </div>
+
                         </div>
 
                         <!-- fovorites location section -->
                         <div class="collapse collapse-horizontal" id="collapseExample">
 
                             <div class="drop" style="width: 5rem;">
-                                <a href="" class="light-text suggestion">Birmingham</a>
+                                <!-- <a href="" class="light-text suggestion">Birmingham</a> -->
                                 <!-- <a href="" class="light-text suggestion">NewYork</a>
                                 <a href="" class="light-text suggestion">London</a> -->
                             </div>
@@ -227,12 +258,14 @@
                     </div>
                     <!-- card2 end -->
                 </div>
+            
 
 
             </div>
-        </div>
-    </div>
+        </div> 
 
+
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
         crossorigin="anonymous"></script>

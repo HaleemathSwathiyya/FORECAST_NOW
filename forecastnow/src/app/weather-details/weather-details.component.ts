@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationExtras } from '@angular/router';
 import { Climate } from 'src/model/weather.model';
 import { WeathserviService } from '../weathservi.service';
 
@@ -28,6 +29,15 @@ export class WeatherDetailsComponent implements OnInit{
     this.getWeatherData(this.cityName);
     this.cityName = '';
 
+  //   const navigationExtras: NavigationExtras = {
+  //     state: {
+  //       cityName: this.cityName
+  //     }
+  //   };
+
+  //   this.weathserviService.navigate(['/favorites-page'], navigationExtras);
+  // }
+
   }
 
   private getWeatherData(cityName: string){
@@ -40,6 +50,8 @@ export class WeatherDetailsComponent implements OnInit{
       }
     })
   }
+
+  
 
 
 }

@@ -1,4 +1,253 @@
-@import url('https://fonts.googleapis.com/css?family=Numans');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+    background: #ececec;
+    padding: 0 20px 0 20px;
+    background-image: url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?cs=srgb&dl=pexels-stephan-seeber-1261728.jpg&fm=jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.row {
+    width: 900px;
+    height: 550px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.side-image {
+    background-image: url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+}
+
+img {
+    width: 35px;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.text p {
+    color: #fff;
+    font-size: 18px;
+}
+
+i {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-box {
+    width: 350px;
+    height: 350px;
+    padding-top: 1.5rem;
+    /* padding-bottom: 2rem; */
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.2px);
+    -webkit-backdrop-filter: blur(3.2px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.input-box header {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+
+.input {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+}
+
+.input-box .input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-field .input:focus~label {
+    top: -5px;
+}
+
+.input-field .input:valid~label {
+    top: -10px;
+    font-size: 13px;
+    color: #5d5076;
+}
+
+.input-field .input:focus,
+.input-field .input:valid {
+    border-bottom: 1px solid #743ae1;
+}
+
+.submit {
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #212020e6;
+    color: white;
+    border-radius: 5px;
+    transition: .4s;
+}
+
+.submit:hover {
+    background: rgba(69, 70, 70, 0.457);
+    color: #fff;
+}
+
+.signin {
+    text-align: center;
+    font-size: small;
+    margin-top: 25px;
+}
+
+span a {
+    text-decoration: none;
+    font-weight: 700;
+    color: #000;
+    transition: .5s;
+}
+
+span a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+    .side-image {
+        border-radius: 10px 10px 0 0;
+    }
+
+    img {
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+
+    .text {
+        position: absolute;
+        top: 70%;
+        text-align: center;
+    }
+
+    .text p,
+    i {
+        font-size: 17px;
+    }
+
+    .row {
+        max-width: 420px;
+        width: 100%;
+    }
+}
+
+ 
+.navbar-brand {
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  /* margin-right: 1rem; */
+  font-size: 1.25rem;
+  color: #0f6796; 
+  text-decoration: none;
+  white-space: nowrap;
+  
+}
+
+.navbar{
+  
+  background-color: rgba(0, 4, 8, 0.829) !important;
+
+}
+
+/* .container-fluid{
+  background-color: rgba(0, 0, 0, 0.2) !important;
+
+} */
+
+.nav-link{
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  /* margin-right: 1rem; */
+  color: #B0BEC5 ;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.nav-link:hover{
+  color:rgba(136, 176, 240, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html, body {
   height: 100vh;
@@ -22,7 +271,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: 100px; /* Adjust the top margin value as needed */
+  margin-top: 100px; Adjust the top margin value as needed
 }
 .text-centre{
     text-align: center;
@@ -34,7 +283,7 @@ body {
   background-color: rgba(0, 0, 0, 0.2) !important;
 }
 
-/* Rest of the CSS code remains the same */
+Rest of the CSS code remains the same
 
 .social_icon span{
 font-size: 45px;
@@ -101,8 +350,8 @@ color: rgb(5, 5, 5);
 margin-left: 4px;
 }
 .card-footer .links a {
-  color: rgb(73, 27, 19); /* Replace "red" with the desired color */
+  color: rgb(73, 27, 19); Replace "red" with the desired color
 }
 .d-flex.justify-content-center a {
-    color: rgb(73, 27, 19); /* Replace "green" with the desired color */
-  }
+    color: rgb(73, 27, 19); Replace "green" with the desired color
+  } */

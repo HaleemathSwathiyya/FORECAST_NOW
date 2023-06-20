@@ -1,11 +1,17 @@
 export const environments={
     production:false,
-    weatherBaseUrl:'https://apjoy-weather-forecast.p.rapidapi.com/forecast',
+    weatherBaseUrl:'https://weatherapi-com.p.rapidapi.com/forecast.json',
+
+    // weatherBaseUrl:'https://open-weather13.p.rapidapi.com/city/berlin',
+
+    // weatherBaseUrl:'https://forecast9.p.rapidapi.com/rapidapi/forecast/Berlin/summary',
+
+    // weatherBaseUrl:'https://apjoy-weather-forecast.p.rapidapi.com/forecast',
 
     // weatherBaseUrl:'https://forecast9.p.rapidapi.com/rapidapi/forecast/Berlin/summary/',
     
     XRapidAPIHostHeaderName: 'X-RapidAPI-Host',
-    XRapidAPIHostHeaderValue: 'apjoy-weather-forecast.p.rapidapi.com',
+    XRapidAPIHostHeaderValue: 'weatherapi-com.p.rapidapi.com',
     XRapidAPIKeyHeaderName: 'X-RapidAPI-Key',
-    XRapidAPIKeyHeaderValue: 'd9aec5c4d0mshd1d5baffec06509p1abf51jsnb08c2af18cfb',
+    XRapidAPIKeyHeaderValue: '18eaeaa7ddmsh3d407760f64b37ep197a01jsn55ab8f33164c',
 }
